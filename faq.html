@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — Fishermen's Buddy</title>
+  <link rel="icon" href="./images/icon.png" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: #060f18;
+      color: #e5e7eb;
+      line-height: 1.7;
+      padding: 40px 20px 80px;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 2rem; font-weight: 700; color: #00c896; margin-bottom: 4px; }
+    .subtitle { font-size: 0.85rem; color: #6b7280; margin-bottom: 36px; }
+    h2 { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; margin-top: 40px; margin-bottom: 14px; }
+    a { color: #00c896; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    details {
+      background: #101a24;
+      border: 1px solid #1f2937;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #f9fafb;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+';
+      font-size: 1.3rem;
+      color: #00c896;
+      margin-left: 12px;
+      flex-shrink: 0;
+    }
+    details[open] summary::after { content: '\2212'; }
+    details p { margin-top: 12px; color: #d1d5db; font-size: 0.95rem; }
+    details p a { color: #00c896; }
+    .footer-links { margin-top: 48px; font-size: 0.85rem; color: #6b7280; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>FAQ</h1>
+    <p class="subtitle">Fishermen's Buddy &mdash; Fishing Intelligence App</p>
+
+    <h2>Getting Started</h2>
+
+    <details>
+      <summary>What is Fishermen's Buddy?</summary>
+      <p>Fishermen's Buddy is a personal fishing log and forecast app. You log your catches; it automatically records the tide, weather, moon phase, and other conditions behind each one, then uses your own history to predict when and where the bite will be good &mdash; for the specific species you target, in your specific waters.</p>
+    </details>
+
+    <details>
+      <summary>Is Fishermen's Buddy free?</summary>
+      <p>Yes, Fishermen's Buddy is currently free to use. If we ever introduce paid features, we'll give clear notice and pricing before you're charged anything.</p>
+    </details>
+
+    <details>
+      <summary>What platforms does it run on?</summary>
+      <p>Fishermen's Buddy is currently in beta on both iOS and Android.</p>
+    </details>
+
+    <details>
+      <summary>How do I join the beta?</summary>
+      <p>Email <a href="mailto:joeldubey@gmail.com?subject=Fisherman%27s%20Buddy%20Beta%20Access">joeldubey@gmail.com</a> and we'll get you set up.</p>
+    </details>
+
+    <details>
+      <summary>Do I need to log a lot of catches before it's useful?</summary>
+      <p>No &mdash; every species starts from sensible defaults based on fish biology and regional seasonality, so you get useful forecasts from day one. The more you log, the more the app leans on your own results instead of the general estimate.</p>
+    </details>
+
+    <h2>How the Forecast Works</h2>
+
+    <details>
+      <summary>Where does the weather and tide data come from?</summary>
+      <p>Live weather comes from Open-Meteo's public weather API. Tide predictions come from NOAA CO-OPS for US waters and a number of international ports, and fall back to WorldTides (a global tidal model) elsewhere. No account information or personal identifiers are sent to either service &mdash; just your GPS coordinates.</p>
+    </details>
+
+    <details>
+      <summary>What does the 0&ndash;100 score actually mean?</summary>
+      <p>It's a weighted blend of how well current or forecast conditions (tide, water temperature, time of day, moon, wind, pressure, cloud cover) match what that species prefers &mdash; scaled so 90+ is Excellent, 70+ Good, 50+ Fair, and under 50 Poor. Season and range can cap the score even when conditions look perfect, if the fish isn't reliably around yet.</p>
+    </details>
+
+    <details>
+      <summary>What if I catch a fish outside where the app expects it?</summary>
+      <p>We'll ask before saving. Tap "Add this area" and we save the catch and start forecasting that fish there, scored like any other &mdash; your catches are always the final word on where a fish lives.</p>
+    </details>
+
+    <details>
+      <summary>Does it work if I have no cell signal on the water?</summary>
+      <p>Yes. Your catch saves immediately, offline, and syncs once you're back in range &mdash; we backfill the weather, tide, and moon data for that exact spot and time automatically. You never lose a catch or have to enter conditions by hand.</p>
+    </details>
+
+    <h2>Privacy &amp; Account</h2>
+
+    <details>
+      <summary>Is my data private?</summary>
+      <p>We don't sell your data or use it for advertising, and we use no third-party analytics or ad SDKs. Your account and catch data is stored securely with Supabase; GPS coordinates are sent to Open-Meteo and NOAA/WorldTides only to fetch weather and tide data, with no personal identifiers attached. Full details are in our <a href="./privacy-policy.html">Privacy Policy</a>.</p>
+    </details>
+
+    <details>
+      <summary>Can I delete my account and data?</summary>
+      <p>Yes, any time. Email <a href="mailto:joeldubey@gmail.com?subject=Fisherman%27s%20Buddy%20Account%20Deletion">joeldubey@gmail.com</a> from your account's registered email address and we'll process the deletion within 30 days.</p>
+    </details>
+
+    <details>
+      <summary>Something's not working &mdash; who do I contact?</summary>
+      <p>Visit our <a href="./index.html">Support page</a> or email <a href="mailto:joeldubey@gmail.com?subject=Fisherman%27s%20Buddy%20Support">joeldubey@gmail.com</a> directly with your device type and a description of the issue.</p>
+    </details>
+
+    <p class="footer-links">Fishermen's Buddy &middot; <a href="./index.html">Support</a> &middot; <a href="./privacy-policy.html">Privacy Policy</a> &middot; <a href="./terms-of-service.html">Terms</a></p>
+  </div>
+</body>
+</html>
