@@ -56,9 +56,14 @@
     box-shadow: 0 10px 28px rgba(0, 200, 150, 0.3);
   }
   .btn-primary:hover { filter: brightness(1.08); }
+  .store-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 18px; }
+  .store-btn { display: inline-flex; align-items: center; gap: 10px; background: #101A24; border: 1px solid rgba(255,255,255,0.18); color: #F0F4F8; text-decoration: none; padding: 11px 22px; border-radius: 12px; transition: border-color 0.2s ease, transform 0.2s ease; }
+  .store-btn:hover { border-color: #00C896; transform: translateY(-1px); }
+  .store-btn .st { display: flex; flex-direction: column; line-height: 1.15; text-align: left; }
+  .store-btn .st small { font-size: 0.62rem; font-weight: 600; color: #8B9BAE; text-transform: uppercase; letter-spacing: 0.05em; }
+  .store-btn .st b { font-size: 1.05rem; font-weight: 800; }
   .availability { font-size: 0.88rem; color: #8B9BAE; font-weight: 600; }
   .availability .check { color: #00C896; }
-  .fallback-email { font-size: 0.85rem; color: #6B7A8C; font-weight: 600; margin-top: 6px; }
 
   /* Philosophy + 3-card band */
   .philosophy { position: relative; z-index: 1; background: #0A121C; border-top: 1px solid rgba(0,200,150,0.12); border-bottom: 1px solid rgba(0,200,150,0.12); padding: 60px 0 68px; margin-top: 40px; }
@@ -144,8 +149,6 @@
   .price-card p.plan-note { font-size: 0.9rem; color: #8B9BAE; }
   .pricing-foot { text-align: center; max-width: 580px; margin: 34px auto 0; color: #8B9BAE; font-size: 0.95rem; }
   .pricing-foot .accent { color: #00C896; font-weight: 700; }
-  .beta-note { text-align: center; max-width: 620px; margin: 22px auto 0; background: rgba(0,200,150,0.1); border: 1px solid rgba(0,200,150,0.25); border-radius: 14px; padding: 16px 22px; color: #C7F5E8; font-size: 0.95rem; }
-  .beta-note strong { color: #00C896; }
   @media (max-width: 720px) { .pricing-grid { grid-template-columns: 1fr; max-width: 340px; } }
 
   /* Closing CTA */
@@ -193,14 +196,15 @@
   <section class="hero" id="top">
     <div class="wrap">
       <img class="hero-icon" src="./images/icon.png" alt="Fishermen's Buddy" />
-      <div class="eyebrow">Now in beta on iOS &amp; Android</div>
+      <div class="eyebrow">Available on iOS &amp; Android</div>
       <h1 class="headline">Know before you go.</h1>
       <p class="subhead">Fishermen's Buddy logs every catch, quietly captures the conditions behind it, and learns your waters — so it can tell you exactly when the bite's going to be on, before you ever leave the dock.</p>
-      <div class="cta-row">
-        <a class="btn-primary" href="mailto:joeldubey@gmail.com?subject=Fisherman%27s%20Buddy%20Beta%20Access">Join the Beta</a>
+      <!-- TODO: swap href="#" for the real App Store / Google Play listing URLs once the app is live -->
+      <div class="store-row">
+        <a class="store-btn" href="#"><span class="st"><small>Download on the</small><b>App Store</b></span></a>
+        <a class="store-btn" href="#"><span class="st"><small>Get it on</small><b>Google Play</b></span></a>
       </div>
-      <div class="availability"><span class="check">&#10003;</span> iPhone &nbsp; <span class="check">&#10003;</span> Android &nbsp; <span class="check">&#10003;</span> Beta available now</div>
-      <div class="fallback-email">Email <a href="mailto:joeldubey@gmail.com?subject=Fisherman%27s%20Buddy%20Beta%20Access">joeldubey@gmail.com</a> to get access</div>
+      <div class="availability"><span class="check">&#10003;</span> iPhone &nbsp; <span class="check">&#10003;</span> Android &nbsp; <span class="check">&#10003;</span> Free to start &mdash; 25 catches on the house</div>
     </div>
   </section>
 
@@ -359,51 +363,50 @@
         </div>
       </div>
       <p class="pricing-foot reveal">Every plan unlocks the same thing: <span class="accent">unlimited catch logging and personalized forecasting</span>. Your first 25 catches are always free, and you keep everything you've already logged &mdash; no matter which plan you choose.</p>
-      <div class="beta-note reveal">🎣 <strong>Join the beta today and it's free</strong> &mdash; early testers keep unlimited access for life.</div>
     </div>
   </section>
 
   <section class="testimonials">
     <div class="wrap">
       <div class="section-heading reveal">
-        <h2>What Beta Testers Are Saying</h2>
-        <p>Real feedback from the anglers using Fishermen's Buddy right now.</p>
+        <h2>What Anglers Are Saying</h2>
+        <p>Real feedback from anglers using Fishermen's Buddy.</p>
       </div>
       <div class="t-grid">
-        <!-- TODO: replace with a real beta tester quote -->
+        <!-- TODO: replace with a real angler review -->
         <div class="t-card reveal">
           <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="quote">"Beta tester quote coming soon."</p>
+          <p class="quote">"Angler review coming soon."</p>
           <p class="name">Name</p>
-          <p class="role">Beta Tester</p>
+          <p class="role">Angler</p>
         </div>
-        <!-- TODO: replace with a real beta tester quote -->
+        <!-- TODO: replace with a real angler review -->
         <div class="t-card reveal">
           <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="quote">"Beta tester quote coming soon."</p>
+          <p class="quote">"Angler review coming soon."</p>
           <p class="name">Name</p>
-          <p class="role">Beta Tester</p>
+          <p class="role">Angler</p>
         </div>
-        <!-- TODO: replace with a real beta tester quote -->
+        <!-- TODO: replace with a real angler review -->
         <div class="t-card reveal">
           <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="quote">"Beta tester quote coming soon."</p>
+          <p class="quote">"Angler review coming soon."</p>
           <p class="name">Name</p>
-          <p class="role">Beta Tester</p>
+          <p class="role">Angler</p>
         </div>
-        <!-- TODO: replace with a real beta tester quote -->
+        <!-- TODO: replace with a real angler review -->
         <div class="t-card reveal">
           <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="quote">"Beta tester quote coming soon."</p>
+          <p class="quote">"Angler review coming soon."</p>
           <p class="name">Name</p>
-          <p class="role">Beta Tester</p>
+          <p class="role">Angler</p>
         </div>
-        <!-- TODO: replace with a real beta tester quote -->
+        <!-- TODO: replace with a real angler review -->
         <div class="t-card reveal">
           <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="quote">"Beta tester quote coming soon."</p>
+          <p class="quote">"Angler review coming soon."</p>
           <p class="name">Name</p>
-          <p class="role">Beta Tester</p>
+          <p class="role">Angler</p>
         </div>
       </div>
     </div>
@@ -413,10 +416,11 @@
     <div class="wrap">
       <h2>You already know the good days exist.</h2>
       <p>Fishermen's Buddy turns every trip &mdash; good or bad &mdash; into data that makes the next one better. Stop guessing when the bite's on.</p>
-      <div class="cta-row" style="justify-content:center;">
-        <a class="btn-primary" href="mailto:joeldubey@gmail.com?subject=Fisherman%27s%20Buddy%20Beta%20Access">Join the Beta</a>
+      <!-- TODO: swap href="#" for the real App Store / Google Play listing URLs once the app is live -->
+      <div class="store-row" style="justify-content:center;">
+        <a class="store-btn" href="#"><span class="st"><small>Download on the</small><b>App Store</b></span></a>
+        <a class="store-btn" href="#"><span class="st"><small>Get it on</small><b>Google Play</b></span></a>
       </div>
-      <div class="fallback-email">or email <a href="mailto:joeldubey@gmail.com">joeldubey@gmail.com</a> directly</div>
     </div>
   </section>
 
