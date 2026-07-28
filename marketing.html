@@ -131,6 +131,23 @@
   @media (max-width: 860px) { .t-grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 560px) { .t-grid { grid-template-columns: 1fr; } }
 
+  /* Pricing */
+  .pricing { position: relative; z-index: 1; padding: 20px 0 90px; }
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 900px; margin: 0 auto; }
+  .price-card { position: relative; background: #101A24; border: 1px solid rgba(255,255,255,0.06); border-radius: 18px; padding: 34px 26px; text-align: center; box-shadow: 0 16px 40px rgba(0,0,0,0.3); }
+  .price-card.featured { border-color: rgba(0,200,150,0.5); box-shadow: 0 16px 46px rgba(0,200,150,0.18); }
+  .price-card .ribbon { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(100deg, #00C896, #009973); color: #04110C; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 14px; border-radius: 999px; white-space: nowrap; }
+  .price-card .plan-name { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8B9BAE; margin-bottom: 14px; }
+  .price-card .price { margin-bottom: 12px; }
+  .price-card .amount { font-size: 2.4rem; font-weight: 800; color: #F0F4F8; }
+  .price-card .per { font-size: 0.95rem; font-weight: 600; color: #8B9BAE; margin-left: 4px; }
+  .price-card p.plan-note { font-size: 0.9rem; color: #8B9BAE; }
+  .pricing-foot { text-align: center; max-width: 580px; margin: 34px auto 0; color: #8B9BAE; font-size: 0.95rem; }
+  .pricing-foot .accent { color: #00C896; font-weight: 700; }
+  .beta-note { text-align: center; max-width: 620px; margin: 22px auto 0; background: rgba(0,200,150,0.1); border: 1px solid rgba(0,200,150,0.25); border-radius: 14px; padding: 16px 22px; color: #C7F5E8; font-size: 0.95rem; }
+  .beta-note strong { color: #00C896; }
+  @media (max-width: 720px) { .pricing-grid { grid-template-columns: 1fr; max-width: 340px; } }
+
   /* Closing CTA */
   .closing { position: relative; z-index: 1; text-align: center; padding: 20px 0 90px; }
   .closing h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 16px; color: #F0F4F8; }
@@ -166,6 +183,7 @@
       </a>
       <nav class="nav-links">
         <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
         <a href="./index.html">Support</a>
         <a href="./privacy-policy.html">Privacy</a>
       </nav>
@@ -313,6 +331,35 @@
         <div class="how-step reveal"><div class="step-num">5</div><div class="step-label">Best Windows Predicted</div></div>
         <div class="how-step reveal"><div class="step-num">6</div><div class="step-label">Know Before You Go</div></div>
       </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <div class="wrap">
+      <div class="section-heading reveal">
+        <h2>Simple pricing. Start free.</h2>
+        <p>Log your first 25 catches free &mdash; no card required. Keep going for less than the price of a pack of hooks.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="price-card reveal">
+          <div class="plan-name">Monthly</div>
+          <div class="price"><span class="amount">$1.99</span><span class="per">/ month</span></div>
+          <p class="plan-note">Unlimited catches, billed monthly. Cancel anytime.</p>
+        </div>
+        <div class="price-card featured reveal">
+          <div class="ribbon">Best value</div>
+          <div class="plan-name">Yearly</div>
+          <div class="price"><span class="amount">$19.99</span><span class="per">/ year</span></div>
+          <p class="plan-note">Unlimited catches &mdash; under $1.67 a month.</p>
+        </div>
+        <div class="price-card reveal">
+          <div class="plan-name">Lifetime</div>
+          <div class="price"><span class="amount">$49.99</span><span class="per">once</span></div>
+          <p class="plan-note">Pay once. Unlimited catches, yours forever.</p>
+        </div>
+      </div>
+      <p class="pricing-foot reveal">Every plan unlocks the same thing: <span class="accent">unlimited catch logging and personalized forecasting</span>. Your first 25 catches are always free, and you keep everything you've already logged &mdash; no matter which plan you choose.</p>
+      <div class="beta-note reveal">🎣 <strong>Join the beta today and it's free</strong> &mdash; early testers keep unlimited access for life.</div>
     </div>
   </section>
 
